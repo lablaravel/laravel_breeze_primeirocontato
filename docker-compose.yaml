@@ -38,6 +38,7 @@ services:
       - "8081:80"
     volumes:
       - ./app/:/var/www
+      - .docker/sandbox-queue/opt/docker/etc/supervisor.d/php-fpm.conf:/opt/docker/etc/supervisor.d/php-fpm.conf
     networks:
       - app-network-laravel
 
